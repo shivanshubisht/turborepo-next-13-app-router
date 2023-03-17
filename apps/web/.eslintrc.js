@@ -1,4 +1,4 @@
 module.exports = {
   root: true,
-  extends: ['next/babel', 'custom'],
+  extends: ["custom"],
 }

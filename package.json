@@ -8,32 +8,26 @@
   ],
   "scripts": {
     "build": "turbo run build",
-    "build:cli": "turbo --filter=@shadcn/ui build",
-    "dev": "turbo run dev --parallel",
-    "dev:cli": "turbo --filter=@shadcn/ui dev",
-    "start:cli": "pnpm --filter=@shadcn/ui start:dev",
+    "dev": "dotenv -- turbo run dev",
     "lint": "turbo run lint",
     "preview": "turbo run preview",
     "typecheck": "turbo run typecheck",
     "format": "prettier --write \"**/*.{js,cjs,mjs,ts,tsx,md,json}\" --ignore-path .gitignore",
     "format:write": "turbo run format",
     "format:check": "turbo run format:check",
-    "sync:templates": "./scripts/sync-templates.sh \"templates/*\"",
     "prepare": "husky install",
     "check": "turbo lint typecheck format:check",
-    "release": "changeset version",
-    "pub:beta": "cd packages/cli && pnpm pub:beta",
-    "pub:release": "cd packages/cli && pnpm pub:release"
+    "release": "changeset version"
   },
   "dependencies": {
     "@changesets/changelog-github": "^0.4.8",
-    "@changesets/cli": "^2.26.0",
-    "@ianvs/prettier-plugin-sort-imports": "^3.7.1",
-    "cross-env": "^7.0.3"
+    "@changesets/cli": "^2.26.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.4",
     "@commitlint/config-conventional": "^17.4.4",
+    "@ianvs/prettier-plugin-sort-imports": "^3.7.1",
+    "dotenv-cli": "^7.1.0",
     "eslint-config-custom": "workspace:*",
     "husky": "^8.0.3",
     "prettier": "^2.8.4",
@@ -42,7 +36,8 @@
     "turbo": "latest"
   },
   "engines": {
-    "node": ">=19.0.0"
+    "node": ">=19.0.0",
+    "pnpm": ">=7.0.0"
   },
   "packageManager": "pnpm@7.29.3"
 }
