@@ -13,7 +13,7 @@
     "format:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache"
   },
   "dependencies": {
-    "next": "13.2.5-canary.7",
+    "next": "13.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "ui": "workspace:*",
