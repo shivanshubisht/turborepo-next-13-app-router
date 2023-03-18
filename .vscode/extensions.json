@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "albert.TabOut",
+    "bradlc.vscode-tailwindcss",
+    "dbaeumer.vscode-eslint",
+    "dsznajder.es7-react-js-snippets",
+    "esbenp.prettier-vscode",
+    "mattpocock.ts-error-translator",
+    "Orta.vscode-twoslash-queries",
+    "yzhang.markdown-all-in-one"
+  ]
+}
