@@ -57,7 +57,10 @@ module.exports = {
   },
   parser: "@typescript-eslint/parser",
   parserOptions: {
-    project: "./tsconfig.json",
+    ecmaVersion: "latest",
+    tsconfigRootDir: __dirname,
+    // may cause error due to packages/*/tsconfig.json file not being defined
+    project: ["apps/*/tsconfig.json", "packages/*/tsconfig.json"],
   },
   settings: {
     tailwindcss: {
